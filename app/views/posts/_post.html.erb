@@ -1,0 +1,7 @@
+<div id="<%= dom_id post %>">
+  <h2><%= link_to post.title, post %></h2>
+  <p><%= post.image_data %></p>
+  <h2><%= post.image_data.length %></h2>
+  <%= image_tag(post.image(:small).url) if post.image %>
+  <%= image_tag(post.image_url, style: "width: 300px; height: auto" ) if post.image %>
+</div>
